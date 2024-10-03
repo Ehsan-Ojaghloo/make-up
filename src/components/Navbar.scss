@@ -1,0 +1,92 @@
+@use "../themes/colors.scss" as *;
+
+@font-face {
+    font-family: dirooz;
+    src: url("../../public/fonts/Dirooz.ttf");
+}
+
+.navbar-con {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: none;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+
+        .nav-btn-con {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            .user-panel-peek {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-family: sans-serif;
+                cursor: pointer;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50px;
+                }
+
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+
+            button {
+                font-family: dirooz;
+                width: 120px;
+                padding: 8px;
+                background-color: $main-color;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-family: dirooz;
+
+            li {
+                list-style-type: none;
+                cursor: pointer;
+            }
+
+            span {
+                filter: opacity(20%);
+                font-size: 1.5rem;
+            }
+
+        }
+
+        img {
+            width: 70px;
+            height: 70px;
+        }
+
+    }
+
+}

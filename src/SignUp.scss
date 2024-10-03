@@ -1,0 +1,118 @@
+@use "./themes/colors.scss" as *;
+
+@font-face {
+    font-family: dirooz;
+    src: url("/fonts/Dirooz.ttf");
+}
+
+@font-face {
+    font-family: Alexandria-ExtraBold;
+    src: url("/fonts/static/Alexandria-ExtraBold.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-con {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // align-items: center;
+    
+
+    .login-img {
+        background-image: url("/images/Cosmetics-for-gift.png");
+        width: 50%;
+        height: 100dvh;
+    }
+
+    .login-form-con {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        // background-color: red;
+        width: 50%;
+        height: 100dvh;
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 20px;
+            direction: rtl;
+            // background-color: green;
+
+            .login-form-title {
+                font-family: dirooz;
+                color: $main-color;
+
+                h1 {
+                    font-family: Alexandria-ExtraBold;
+                    font-size: 2.4rem;
+                    margin-bottom: 25px;
+                }
+
+            }
+
+            .form-con {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                input {
+                    padding: 15px;
+                    width: 250px;
+                    border-radius: 5px;
+                    border: 1px solid $main-color;
+                    font-family: dirooz;
+                    outline: none;
+                }
+
+            }
+
+            button, .confirm-sign-up-btn {
+                padding: 15px;
+                width: 282px;
+                border-radius: 5px;
+                border: 1px solid $main-color;
+                background-color: $main-color;
+                color: white;
+                font-family: dirooz;
+                cursor: pointer;
+                transition: 0.4s;
+            }
+
+            .confirm-sign-up-btn:hover {
+                background-color: $dark-purple;
+            }
+
+            .google-sign-up {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                background-color: white;
+                color: $main-color;
+                transition: none;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,98 @@
+@use "./themes/colors.scss" as *;
+
+@font-face {
+    font-family: dirooz;
+    src: url("/fonts/Dirooz.ttf");
+}
+
+@font-face {
+    font-family: Lemonada-Regular;
+    src: url("/public/fonts/Lemonada-Regular.ttf");
+}
+
+@font-face {
+    font-family: Lemonada;
+    src: url("/fonts/Lemonada-Bold.ttf");
+}
+
+
+.hero-con {
+    overflow-y: none;
+    position: relative;
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+
+        .hero-item-con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            width: 75%;
+
+            img {
+                width: 500px;
+                height: 600px;
+                border-radius: 10px;
+            }
+
+            .hero-text-con {
+                font-family: dirooz;
+                direction: rtl;
+
+                h1 {
+
+                    span {
+                        color: $main-color;
+                        font-family: Lemonada-Regular;
+                    }
+
+                }
+
+                button {
+                    font-family: dirooz;
+                    width: 180px;
+                    padding: 12px;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: $main-color;
+                    color: white;
+                    cursor: pointer;
+                }
+
+            }
+
+        }
+
+    }
+
+    .circle1 {
+        width: 300px;
+        height: 300px;
+        background-color: $main-color;
+        z-index: -99;
+        filter: blur(90px);
+        border-radius: 200px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .circle2 {
+        width: 300px;
+        height: 300px;
+        background-color: $main-color;
+        z-index: -99;
+        filter: blur(130px);
+        border-radius: 200px;
+        position: absolute;
+        top: 80px;
+        left: 10px;
+    }
+
+}

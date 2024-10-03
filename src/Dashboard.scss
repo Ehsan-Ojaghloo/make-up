@@ -1,0 +1,85 @@
+@font-face {
+    font-family: dirooz;
+    src: url("../public/fonts/Dirooz.ttf");
+}
+
+.dashboard-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .dashboard-user-info-con {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-image: url("/public/images/dashboard-bg.jpg");
+        width: 100%;
+        height: 45dvh;
+
+        .dashboard-user-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            // background-color: red;
+
+            .dashboard-btn-con {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                // background-color: green;
+            }
+
+            .dashboard-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                // background-color: yellow;
+
+                .dashboard-info-text {
+
+                    .info-text-con {
+                        font-family: dirooz;
+
+                        h2 {
+                            margin-bottom: -15px;
+                            color: white;
+                        }
+
+                    }
+
+                }
+                
+                .dashboard-info-img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px;
+                    border-radius: 300px;
+
+                    img {
+                        width: 250px;
+                        height: 250px;
+                        border-radius: 300px;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .dasboard-other-info-con {
+
+    }
+
+}

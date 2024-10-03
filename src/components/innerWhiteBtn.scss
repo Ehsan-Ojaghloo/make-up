@@ -1,0 +1,18 @@
+@use "../themes/colors.scss" as *;
+
+@font-face {
+    font-family: dirooz;
+    src: url("/fonts/Dirooz.ttf");
+}
+
+.inner-white-btn {
+    width: 180px;
+    height: 60px;
+    font-family: dirooz;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    color: $main-color;
+    background-color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
