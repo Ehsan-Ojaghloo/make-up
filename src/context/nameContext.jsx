@@ -10,10 +10,13 @@ const nameProvider = ({ children }) => {
 
     const [delAcc, setDelAcc] = useState(false);
 
-    // const [isLogin , setIsLogin] = useState(false)
+    const [courseNum, setCourseNum] = useState({
+        one: 1,
+        two: 2
+    });
 
     return (
-        <nameContext.Provider value={{ name, setName, email, setEmail, password, setPassword, delAcc, setDelAcc }}>
+        <nameContext.Provider value={{ name, setName, email, setEmail, password, setPassword, delAcc, setDelAcc, courseNum, setCourseNum }}>
             {children}
         </nameContext.Provider>
     )

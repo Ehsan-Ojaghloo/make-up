@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import "./Navbar.scss"
 import { Link } from 'react-router-dom'
 import UserPeek from './UserPeek'
@@ -12,13 +12,15 @@ function Navbar() {
         <div className='navbar-con'>
             <nav>
                 <div className="nav-btn-con">
-                    {localName !== "" ? <UserPeek/> : <LoignBtn/>}
-                    <img src="/public/images/cart.svg" alt="cart" />
+                    {localName !== null ? <UserPeek /> : <LoignBtn />}
+                    <div className='cart-con'>
+                        <img src="/public/images/cart.svg" alt="cart" />
+                    </div>
                 </div>
                 <ul>
-                    <li> صفحه اصلی </li>
+                    <Link to="/courses" style={{ textDecoration: "none", color: "black" }}><li> دوره ها </li></Link>
                     <span>|</span>
-                    <li> دوره ها </li>
+                    <Link to="/" style={{ textDecoration: "none", color: "black" }}><li> صفحه اصلی </li></Link>
                 </ul>
                 <img src="/public/images/main-icon.svg" alt="site-icon" />
             </nav>

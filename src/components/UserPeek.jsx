@@ -6,7 +6,7 @@ function UserPeek() {
     const localName = localStorage.getItem("Name")
 
     return (
-        <Link to="/sign up" style={{textDecoration: "none", color: "black"}}>
+        <Link to="/dashboard" style={{textDecoration: "none", color: "black"}}>
             <div>
                 <div id='user-peek' className="user-panel-peek">
                     <img src="/images/dashboard-user-icon.jpg" alt="user-icon" />

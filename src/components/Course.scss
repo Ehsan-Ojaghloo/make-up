@@ -1,0 +1,49 @@
+@use "../themes/colors.scss" as *;
+
+@font-face {
+    font-family: dirooz;
+    src: url("../../public/fonts/Dirooz.ttf");
+}
+
+.course-con {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    direction: rtl;
+    padding: 20px;
+    width: 800px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.316);
+    // background-color: red;
+
+    img {
+        width: 30%;
+        height: 100%;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .course-text-con {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        font-family: dirooz;
+
+        button {
+            font-family: dirooz;
+            width: 140px;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            background-color: $main-color;
+            color: white;
+            cursor: pointer;
+        }
+
+    }
+
+}

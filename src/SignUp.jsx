@@ -41,7 +41,7 @@ function Login() {
                 setEmail(emailInput)
                 setPassword(passwordInput)
 
-                toast.success(<h3> خوش آمدید </h3>, {
+                toast.success(<p style={{fontFamily: "dirooz"}}> خوش آمدید </p>, {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -64,7 +64,7 @@ function Login() {
 
         } else {
 
-            toast.error(<h3> لطفا همه اطلاعات خواسته شده را وارد کنید </h3>, {
+            toast.error(<p style={{fontFamily: "dirooz" }}> لطفا همه اطلاعات خواسته شده را وارد کنید </p>, {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,

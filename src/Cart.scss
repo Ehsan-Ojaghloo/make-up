@@ -1,0 +1,39 @@
+@use "./themes/colors.scss" as *;
+
+@font-face {
+    font-family: dirooz;
+    src: url("../public/fonts/Dirooz.ttf");
+}
+
+.cart-menu {
+    height: 100dvh;
+    position: relative;
+
+    .cart-page-con {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    
+        button {
+            display: none;
+        }
+    
+    }
+
+    button {
+        background-color: $main-color;
+        font-family: dirooz;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        width: 200px;
+        padding: 20px;
+        position: absolute;
+        bottom: 60px;
+        right: 100px;
+        cursor: pointer;
+    }
+
+}
