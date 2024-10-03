@@ -14,7 +14,7 @@ function Navbar() {
                 <div className="nav-btn-con">
                     {localName !== null ? <UserPeek /> : <LoignBtn />}
                     <div className='cart-con'>
-                        <img src="/public/images/cart.svg" alt="cart" />
+                        <Link to="/cart"><img src="/public/images/cart.svg" alt="cart" /></Link>
                     </div>
                 </div>
                 <ul>

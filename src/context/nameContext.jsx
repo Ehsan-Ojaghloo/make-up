@@ -9,14 +9,13 @@ const nameProvider = ({ children }) => {
     const [password, setPassword] = useState("");
 
     const [delAcc, setDelAcc] = useState(false);
+    
+    const [addCart, setAddCart] = useState([]);
 
-    const [courseNum, setCourseNum] = useState({
-        one: 1,
-        two: 2
-    });
+    const [isCart, setIsCart] = useState(false);
 
     return (
-        <nameContext.Provider value={{ name, setName, email, setEmail, password, setPassword, delAcc, setDelAcc, courseNum, setCourseNum }}>
+        <nameContext.Provider value={{ name, setName, email, setEmail, password, setPassword, delAcc, setDelAcc, addCart, setAddCart, isCart, setIsCart}}>
             {children}
         </nameContext.Provider>
     )

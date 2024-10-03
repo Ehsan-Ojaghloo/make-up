@@ -1,28 +1,37 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import { nameContext } from './context/nameContext'
 import Course from './components/Course'
 import "./Cart.scss"
+import axios from 'axios'
 
 function Cart() {
 
     const { addCart, setAddCart } = useContext(nameContext)
 
-    const { courseNum, setCourseNum } = useContext(nameContext)
+    const { isCart, setIsCart } = useContext(nameContext)
 
-    const cartAdded = localStorage.getItem("isAddedToCart")
+    const [cart, setCart] = useState([])
 
-    if (cartAdded === "true") {
+    useEffect(() => {
+        axios.get("https://66f44d9f77b5e88970991a7e.mockapi.io/cart-items")
+            .then(res => setCart(res.data))
+    }, [])
+
+    if (isCart === true) {
         return (
             <div className='cart-menu'>
                 <Navbar />
-                <div className='cart-page-con'>
-                    <Course courseNum={courseNum.one} coursePrice={1240000} />
-                </div>
+                {isCart.map((info) => (
+                    <div>
+                        <div className='cart-page-con'>
+                            <Course courseNum={info.title} coursePrice={info.price} />
+                        </div>
+                    </div>
+                ))}
                 <button> ادامه فرایند خرید </button>
             </div>
         )
-
     } else {
         return (
             <>
@@ -32,5 +41,4 @@ function Cart() {
         )
     }
 }
-
 export default Cart

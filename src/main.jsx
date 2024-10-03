@@ -14,11 +14,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <NameProvider>
       <BrowserRouter>
         <Routes>
-          {/* <Route path='/' element={<Hero />} /> */}
+          <Route path='/' element={<Hero />} />
           <Route path='/sign up' element={<SignUp />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/courses' element={<Courses />} />
-          <Route path='/' element={<Cart />} />
+          <Route path='/cart' element={<Cart />} />
         </Routes>
       </BrowserRouter>
     </NameProvider>
